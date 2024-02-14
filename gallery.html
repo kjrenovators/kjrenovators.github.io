@@ -148,7 +148,7 @@
         }
 
 }
-    p {
+  p {
     font-family: Coolvetica, Arial, sans-serif; /* Apply Coolvetica font to paragraphs */
     }
    h1, h2, h3, h4, h5, h6 {
@@ -182,84 +182,61 @@
     </header>
 
     <div class="container">
-        <h2>Gallery</h2>
-        <div class="controls">
-            <div class="before-after-container">
-                <!-- First Row -->
-                <div class="column" id="beforeColumn1">
-                    <h3>Before</h3>
+         <h2>Gallery</h2>
+         <div class="controls">
+             <div class="before-after-container">
+                 <div class="column" id="beforeColumn">
+                     <h3>Before</h3>
                      <img src="Pictures\B & F\B1.jpg" alt="Image 1">
                      <img src="Pictures\B & F\B2.jpg" alt="Image 2">
                      <!-- Add more "Before" images as needed -->
                      <div class="arrow arrow-left" onclick="prevImage()">&#10094;</div>
-                 </div>
-                 <div class="column" id="afterColumn1">
-                     <h3>After</h3>
+                     </div>
+                     <div class="column" id="afterColumn">
+                         <h3>After</h3>
                      <img src="Pictures\B & F\A1.jpg" alt="Image 3">
                      <img src="Pictures\B & F\A2.jpg" alt="Image 4">
                      <!-- Add more "After" images as needed -->
                      <div class="arrow arrow-right" onclick="nextImage()">&#10095;</div>
-                 </div>
-                    <!-- Second Row -->
-                    <!--Enable Another Row -->
-                     <div class="column" id="beforeColumn2">
-                         <h3>Before</h3>
-                         <img src="image5.jpg" alt="Image 5">
-                         <img src="image6.jpg" alt="Image 6">
-                         <!-- Add more "Before" images as needed -->
-                         <div class="arrow arrow-left" onclick="prevImage()">&#10094;</div>
-                     </div>
-                     <div class="column" id="afterColumn2">
-                         <h3>After</h3>
-                         <img src="image7.jpg" alt="Image 7">
-                         <img src="image8.jpg" alt="Image 8">
-                         <!-- Add more "After" images as needed -->
-                         <div class="arrow arrow-right" onclick="nextImage()">&#10095;</div>
-                     </div>
-                     <!-- -->
-                 </div>
-             </div>
-         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-         <script>
-             // JavaScript for image cycling
-             var currentIndex = 0;
-             var beforeImages1 = document.getElementById("beforeColumn1").getElementsByTagName("img");
-             var afterImages1 = document.getElementById("afterColumn1").getElementsByTagName("img");
-             var beforeImages2 = document.getElementById("beforeColumn2").getElementsByTagName("img");
-             var afterImages2 = document.getElementById("afterColumn2").getElementsByTagName("img");
 
-             function showImage(index) {
-                 if (index < 0) {
-                     index = beforeImages1.length - 1;
-                 } else if (index >= beforeImages1.length) {
-                     index = 0;
-                 }
+     <script>
+         // JavaScript for image cycling
+         var currentIndex = 0;
+         var beforeImages = document.getElementById("beforeColumn").getElementsByTagName("img");
+         var afterImages = document.getElementById("afterColumn").getElementsByTagName("img");
 
-                 for (var i = 0; i < beforeImages1.length; i++) {
-                     beforeImages1[i].style.display = "none";
-                     afterImages1[i].style.display = "none";
-                     beforeImages2[i].style.display = "none";
-                     afterImages2[i].style.display = "none";
-                 }
-
-                 beforeImages1[index].style.display = "block";
-                 afterImages1[index].style.display = "block";
-                 beforeImages2[index].style.display = "block";
-                 afterImages2[index].style.display = "block";
-                 currentIndex = index;
+         function showImage(index) {
+             if (index < 0) {
+                 index = beforeImages.length - 1;
+             } else if (index >= beforeImages.length) {
+                 index = 0;
              }
 
-             function prevImage() {
-                 showImage(currentIndex - 1);
+             for (var i = 0; i < beforeImages.length; i++) {
+                 beforeImages[i].style.display = "none";
+                 afterImages[i].style.display = "none";
              }
 
-             function nextImage() {
-                 showImage(currentIndex + 1);
-             }
+             beforeImages[index].style.display = "block";
+             afterImages[index].style.display = "block";
+             currentIndex = index;
+         }
 
-             // Show the first image initially
-             showImage(currentIndex);
-         </script>
-     </body>
-     </html>
+         function prevImage() {
+             showImage(currentIndex - 1);
+         }
+
+         function nextImage() {
+             showImage(currentIndex + 1);
+         }
+
+         // Show the first image initially
+         showImage(currentIndex);
+     </script>
+ </body>
+ </html>
