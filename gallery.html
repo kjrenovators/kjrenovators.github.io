@@ -5,55 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KJ Renovations - Gallery</title>
     <style>
+        @font-face {
+            font-family: 'Coolvetica';
+            src: url('Fonts\coolvetica_rg.ttf') format('truetype'); /* Replace 'Coolvetica-Regular.ttf' with the actual path to your font file */
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: Coolvetica, Arial, sans-serif; /* Fallback to Arial if Coolvetica is not available */
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #333;
             color: #fff;
             padding: 10px 20px;
             text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Center vertically */
         }
+
         nav {
-            float: right;
             margin-top: 10px;
-            margin-right: 20px;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 10px;
         }
+
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 0 20px;
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            grid-gap: 20px;
-        }
+
         .gallery img {
             width: 100%;
-            height: auto;
-            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+            left: auto;
+            right: 0;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #555;
+        }
+
+        .dropbtn {
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background-color: #333;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Coolvetica, Arial, sans-serif; /* Apply Coolvetica font to headings */
+        }
+
+        p {
+            font-family: Coolvetica, Arial, sans-serif; /* Apply Coolvetica font to paragraphs */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>KJ Renovations - Gallery</h1>
+        <img src="KJ_Renovator_spelled_out_logo_white-04.png" alt="KJ Renovations" height="50px"> <!-- Replace 'KJ_Renovator_spelled_out_logo_white-04.png' with the path to your image -->
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
         </nav>
     </header>
 
     <div class="container">
+        <h2>Gallery</h2>
         <div class="gallery">
             <img src="image1.jpg" alt="Image 1">
             <img src="image2.jpg" alt="Image 2">
