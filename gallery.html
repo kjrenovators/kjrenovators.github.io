@@ -125,6 +125,63 @@
     </header>
 
     <div class="container">
+       <h2>Gallery</h2>
+       <div class="column" id="beforeColumn">
+           <h3>Before</h3>
+           <img src="image1.jpg" alt="Image 1">
+           <img src="image2.jpg" alt="Image 2">
+           <!-- Add more "Before" images as needed -->
+       </div>
+       <div class="column" id="afterColumn">
+           <h3>After</h3>
+           <img src="image3.jpg" alt="Image 3">
+           <img src="image4.jpg" alt="Image 4">
+           <!-- Add more "After" images as needed -->
+       </div>
+       <div class="controls">
+           <button onclick="prevImage()">Previous</button>
+           <button onclick="nextImage()">Next</button>
+       </div>
+   </div>
+
+   <script>
+       // JavaScript for image cycling
+       var currentIndex = 0;
+       var beforeImages = document.getElementById("beforeColumn").getElementsByTagName("img");
+       var afterImages = document.getElementById("afterColumn").getElementsByTagName("img");
+
+       function showImage(index) {
+           if (index < 0) {
+               index = beforeImages.length - 1;
+           } else if (index >= beforeImages.length) {
+               index = 0;
+           }
+
+           for (var i = 0; i < beforeImages.length; i++) {
+               beforeImages[i].style.display = "none";
+               afterImages[i].style.display = "none";
+           }
+
+           beforeImages[index].style.display = "block";
+           afterImages[index].style.display = "block";
+           currentIndex = index;
+       }
+
+       function prevImage() {
+           showImage(currentIndex - 1);
+       }
+
+       function nextImage() {
+           showImage(currentIndex + 1);
+       }
+
+       // Show the first image initially
+       showImage(currentIndex);
+   </script>
+</body>
+</html>
+
+    <div class="container">
         <h2>Gallery</h2>
         <div class="gallery">
             <img src="image1.jpg" alt="Image 1">
