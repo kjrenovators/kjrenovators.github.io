@@ -140,7 +140,7 @@
         }
 
         .arrow-left {
-            left: -200px; /* Position arrow to the left of the column */
+            left: -30px; /* Position arrow to the left of the column */
         }
 
         .arrow-right {
@@ -182,24 +182,25 @@
     <div class="container">
          <h2>Gallery</h2>
          <div class="controls">
-             <span class="arrow" onclick="prevImage()">&#10095;</span>
              <div class="before-after-container">
                  <div class="column" id="beforeColumn">
                      <h3>Before</h3>
                      <img src="Pictures\B & F\B1.jpg" alt="Image 1">
                      <img src="Pictures\B & F\B2.jpg" alt="Image 2">
                      <!-- Add more "Before" images as needed -->
-                 </div>
-                 <div class="column" id="afterColumn">
-                     <h3>After</h3>
+                     <div class="arrow arrow-left" onclick="prevImage()">&#10094;</div>
+                     </div>
+                     <div class="column" id="afterColumn">
+                         <h3>After</h3>
                      <img src="Pictures\B & F\A1.jpg" alt="Image 3">
                      <img src="Pictures\B & F\A2.jpg" alt="Image 4">
                      <!-- Add more "After" images as needed -->
-                 </div>
-             </div>
-             <span class="arrow" onclick="nextImage()">&#10094;</span>
-         </div>
-     </div>
+                     <div class="arrow arrow-right" onclick="nextImage()">&#10095;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
      <script>
          // JavaScript for image cycling
