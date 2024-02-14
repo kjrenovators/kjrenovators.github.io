@@ -98,40 +98,52 @@
    }
    /*start or column css */
    .column {
-           width: calc(50% - 20px); /* Adjusted width */
-           display: inline-block;
-           vertical-align: top; /* Align columns to the top */
-           padding: 10px;
-           text-align: center; /* Center the content horizontally */
-       }
+            width: calc(50% - 20px); /* Adjusted width */
+            display: inline-block;
+            vertical-align: top; /* Align columns to the top */
+            padding: 10px;
+            text-align: center; /* Center the content horizontally */
+            position: relative; /* Position arrows relative to the column */
+        }
 
-       .column img {
-           width: 100%;
-           margin-bottom: 10px;
-       }
+        .column img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
 
-       .controls {
-           text-align: center;
-           margin-top: 20px;
-       }
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
 
-       .before-after-container {
-           display: flex;
-           justify-content: center; /* Center the columns horizontally */
-           align-items: center; /* Center vertically */
-           flex-wrap: wrap;
-       }
+        .before-after-container {
+            display: flex;
+            justify-content: center; /* Center the columns horizontally */
+            align-items: center; /* Center vertically */
+            flex-wrap: wrap;
+            position: relative; /* Position arrows relative to the container */
+        }
 
-       .before-after-container .column {
-           flex: 1;
-           padding: 0 10px;
-       }
+        .before-after-container .column {
+            flex: 1;
+            padding: 0 10px;
+        }
 
-       .arrow {
-           font-size: 32px;
-           cursor: pointer;
-           margin: 0 10px; /* Add margin for spacing */
-       }
+        .arrow-top {
+            font-size: 32px;
+            cursor: pointer;
+            position: absolute; /* Position arrows absolutely */
+            top: 0; /* Align arrow to the top of the container */
+            left: 10px; /* Align arrow to the left of the column */
+        }
+
+        .arrow-bottom {
+            font-size: 32px;
+            cursor: pointer;
+            position: absolute; /* Position arrows absolutely */
+            bottom: 0; /* Align arrow to the bottom of the container */
+            right: 10px; /* Align arrow to the right of the column */
+        }
 }
         h2 {
            text-align: center; /* Center the "Gallery" heading */
