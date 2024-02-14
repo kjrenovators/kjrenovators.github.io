@@ -35,16 +35,44 @@
             width: 100%;
             margin-bottom: 20px;
         }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to KJ Renovations</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact Us</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Menu</a>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
         </nav>
     </header>
 
