@@ -146,6 +146,17 @@
         .arrow-right {
             right: -30px; /* Position arrow to the right of the column */
         }
+        .gallery-row {
+            clear: both; /* Clear floating images */
+            margin-top: 20px; /* Add margin between rows */
+            text-align: center; /* Center the row */
+        }
+
+        .gallery-row img {
+            width: 30%; /* Adjust image width */
+            margin: 5px; /* Add margin around images */
+            cursor: pointer; /* Show pointer cursor on hover */
+        }
 
 }
   p {
@@ -201,42 +212,72 @@
                     </div>
                 </div>
             </div>
+            <h3 style="text-align: center;">Gallery</h3>
+        <div class="gallery-row">
+            <img src="image5.jpg" alt="Image 5" onclick="expandImage(this)">
+            <img src="image6.jpg" alt="Image 6" onclick="expandImage(this)">
+            <img src="image7.jpg" alt="Image 7" onclick="expandImage(this)">
+        </div>
         </div>
 
 
-     <script>
-         // JavaScript for image cycling
-         var currentIndex = 0;
-         var beforeImages = document.getElementById("beforeColumn").getElementsByTagName("img");
-         var afterImages = document.getElementById("afterColumn").getElementsByTagName("img");
+        <script>
+            // JavaScript for image cycling
+            var currentIndex = 0;
+            var beforeImages = document.getElementById("beforeColumn").getElementsByTagName("img");
+            var afterImages = document.getElementById("afterColumn").getElementsByTagName("img");
 
-         function showImage(index) {
-             if (index < 0) {
-                 index = beforeImages.length - 1;
-             } else if (index >= beforeImages.length) {
-                 index = 0;
-             }
+            function showImage(index) {
+                if (index < 0) {
+                    index = beforeImages.length - 1;
+                } else if (index >= beforeImages.length) {
+                    index = 0;
+                }
 
-             for (var i = 0; i < beforeImages.length; i++) {
-                 beforeImages[i].style.display = "none";
-                 afterImages[i].style.display = "none";
-             }
+                for (var i = 0; i < beforeImages.length; i++) {
+                    beforeImages[i].style.display = "none";
+                    afterImages[i].style.display = "none";
+                }
 
-             beforeImages[index].style.display = "block";
-             afterImages[index].style.display = "block";
-             currentIndex = index;
-         }
+                beforeImages[index].style.display = "block";
+                afterImages[index].style.display = "block";
+                currentIndex = index;
+            }
 
-         function prevImage() {
-             showImage(currentIndex - 1);
-         }
+            function prevImage() {
+                showImage(currentIndex - 1);
+            }
 
-         function nextImage() {
-             showImage(currentIndex + 1);
-         }
+            function nextImage() {
+                showImage(currentIndex + 1);
+            }
 
-         // Show the first image initially
-         showImage(currentIndex);
-     </script>
+            // Show the first image initially
+            showImage(currentIndex);
+
+            // Function to expand image
+            function expandImage(img) {
+                var images = document.querySelectorAll('.gallery-row img');
+                var clickedIndex = Array.prototype.indexOf.call(images, img);
+                var tempSrc = img.src;
+                var tempAlt = img.alt;
+
+                // Move clicked image to the center
+                img.src = beforeImages[0].src;
+                img.alt = beforeImages[0].alt;
+                beforeImages[0].src = tempSrc;
+                beforeImages[0].alt = tempAlt;
+
+                // Shift other images accordingly
+                for (var i = 1; i < beforeImages.length; i++) {
+                    tempSrc = beforeImages[i].src;
+                    tempAlt = beforeImages[i].alt;
+                    beforeImages[i].src = afterImages[i - 1].src;
+                    beforeImages[i].alt = afterImages[i - 1].alt;
+                    afterImages[i - 1].src = tempSrc;
+                    afterImages[i - 1].alt = tempAlt;
+                }
+            }
+        </script>
  </body>
  </html>
