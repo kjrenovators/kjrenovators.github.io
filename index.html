@@ -17,6 +17,7 @@
             text-align: center;
             display: flex;
             justify-content: space-between;
+            align-items: center; /* Center vertically */
         }
         nav {
             margin-top: 10px;
@@ -45,8 +46,8 @@
             background-color: #333;
             min-width: 160px;
             z-index: 1;
-            left: auto; /* Reset to default */
-            right: 0; /* Align right edge with menu box */
+            left: auto;
+            right: 0;
         }
         .dropdown-content a {
             color: #fff;
@@ -75,7 +76,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to KJ Renovations</h1>
+        <img src="/pictures/logo.png" alt="KJ Renovations" height="50px"> <!-- Replace 'KJ_Renovator_spelled_out_logo_white-04.png' with the path to your image -->
         <nav>
             <div class="dropdown">
                 <button class="dropbtn">Menu</button>
