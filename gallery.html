@@ -178,6 +178,54 @@
         p {
             font-family: Coolvetica, Arial, sans-serif; /* Apply Coolvetica font to paragraphs */
         }
+        /* Media queries for responsive design */
+       @media screen and (max-width: 768px) {
+           header {
+               flex-direction: column; /* Stack header items vertically on smaller screens */
+           }
+
+           nav {
+               margin-top: 10px;
+           }
+
+           .dropdown {
+               display: block; /* Show dropdown menu as a block element */
+               margin: 10px auto; /* Center the dropdown menu */
+           }
+
+           .dropdown-content {
+               top: auto; /* Reset top position */
+               bottom: -100%; /* Show dropdown content above the button */
+               left: 50%; /* Center dropdown content horizontally */
+               transform: translateX(-50%); /* Center dropdown content horizontally */
+               width: auto; /* Set width to auto to fit content */
+               min-width: 120px; /* Adjust minimum width if needed */
+           }
+
+           .dropdown:hover .dropdown-content {
+               display: block;
+           }
+
+           .container {
+               padding: 0 10px; /* Add padding to container for better spacing */
+           }
+
+           .column {
+               width: 100%; /* Set column width to 100% on smaller screens */
+           }
+
+           .arrow {
+               font-size: 24px; /* Decrease arrow size on smaller screens */
+           }
+
+           .gallery-row img {
+               width: 100%; /* Set image width to 100% on smaller screens */
+           }
+
+           .expanded-image-container {
+               margin-top: 20px; /* Add margin space */
+           }
+       }
     </style>
 </head>
 <body>
