@@ -5,99 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KJ Renovations - Gallery</title>
     <style>
-      @font-face {
-          font-family: 'Coolvetica';
-          src: url('coolvetica_rg.ttf') format('truetype'); /* Replace 'Coolvetica-Regular.ttf' with the actual path to your font file */
-      }
+        /* Your CSS styles here */
 
-      body {
-       font-family: Coolvetica, Arial, sans-serif; /* Fallback to Arial if Coolvetica is not available */
-       margin: 0;
-       padding: 0;
-   }
+        /* Font */
+        @font-face {
+            font-family: 'Coolvetica';
+            src: url('coolvetica_rg.ttf') format('truetype'); /* Replace 'coolvetica_rg.ttf' with the actual path to your font file */
+        }
 
-   header {
-       background-color: #333;
-       color: #fff;
-       padding: 10px 20px;
-       text-align: center;
-       display: flex;
-       justify-content: space-between;
-       align-items: center; /* Center vertically */
-   }
+        body {
+            font-family: Coolvetica, Arial, sans-serif; /* Fallback to Arial if Coolvetica is not available */
+            margin: 0;
+            padding: 0;
+        }
 
-   nav {
-       margin-top: 10px;
-       display: flex;
-       justify-content: center; /* Center horizontally */
-       align-items: center; /* Center vertically */
-   }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Center vertically */
+        }
 
-   nav a {
-       color: #fff;
-       text-decoration: none;
-       margin: 0 10px;
-   }
+        nav {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
 
-   .container {
-       max-width: 800px;
-       margin: 20px auto;
-       padding: 0 20px;
-   }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
 
-   .gallery img {
-       width: 100%;
-       margin-bottom: 20px;
-   }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
 
-   .dropdown {
-       position: relative;
-       display: inline-block;
-       margin: 0 10px; /* Added margin to adjust position */
-       width: 160px; /* Match the width of dropdown content */
-   }
+        .gallery img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
 
-   .dropdown-content {
-       display: none;
-       position: absolute;
-       background-color: #333;
-       min-width: 160px;
-       z-index: 1;
-       left: auto;
-       right: 0;
-       top: 100%; /* Show below the dropdown button */
-   }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin: 0 10px; /* Added margin to adjust position */
+            width: 160px; /* Match the width of dropdown content */
+        }
 
-   .dropdown-content a {
-       color: #fff;
-       padding: 12px 16px;
-       text-decoration: none;
-       display: block;
-   }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+            left: auto;
+            right: 0;
+            top: 100%; /* Show below the dropdown button */
+        }
 
-   .dropdown-content a:hover {
-       background-color: #555;
-   }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 
-   .dropdown:hover .dropdown-content {
-       display: block;
-   }
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
 
-   .dropdown:hover .dropbtn {
-       background-color: #555;
-   }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-   .dropbtn {
-       color: white;
-       padding: 16px;
-       font-size: 16px;
-       border: none;
-       cursor: pointer;
-       background-color: #333;
-       font-family: Coolvetica, Arial, sans-serif; /* Apply Coolvetica font to menu button */
-   }
-   /*start or column css */
-   .column {
+        .dropdown:hover .dropbtn {
+            background-color: #555;
+        }
+
+        .dropbtn {
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background-color: #333;
+            font-family: Coolvetica, Arial, sans-serif; /* Apply Coolvetica font to menu button */
+        }
+
+        /* Gallery CSS */
+        .column {
             width: calc(50% - 20px); /* Adjusted width */
             display: inline-block;
             vertical-align: top; /* Align columns to the top */
@@ -146,13 +150,16 @@
         .arrow-right {
             right: -30px; /* Position arrow to the right of the column */
         }
+
         .gallery-row {
             clear: both; /* Clear floating images */
             margin-top: 20px; /* Add margin between rows */
             text-align: center; /* Center the row */
         }
+
         .expanded-image-container {
             text-align: center; /* Center the expanded image */
+            margin-top: 20px; /* Add margin space */
         }
 
         .gallery-row img {
@@ -161,129 +168,137 @@
             cursor: pointer; /* Show pointer cursor on hover */
         }
 
-}
-  p {
-    font-family: Coolvetica, Arial, sans-serif; /* Apply Coolvetica font to paragraphs */
-    }
-   h1, h2, h3, h4, h5, h6 {
-       font-family: Coolvetica, Arial, sans-serif; /* Apply Coolvetica font to headings */
-   }
-   h2 {
-        text-align: center; /* Center the "Gallery" heading */
-    }
+        h2 {
+            text-align: center; /* Center the "Gallery" heading */
+        }
 
-   p {
-       font-family: Coolvetica, Arial, sans-serif; /* Apply Coolvetica font to paragraphs */
-   }
-</style>
+        h3 {
+            text-align: center; /* Center the "More of Our Work" heading */
+        }
 
-
+        p {
+            font-family: Coolvetica, Arial, sans-serif; /* Apply Coolvetica font to paragraphs */
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="Pictures/KJ_Renovator_spelled_out_logo_white-04.png" alt="KJ Renovations" height="50px"> <!-- Replace 'KJ_Renovator_spelled_out_logo_white-04.png' with the path to your image -->
-        <nav>
-            <div class="dropdown">
-                <button class="dropbtn">Menu</button>
-                <div class="dropdown-content">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="contact.html">Contact Us</a>
-                </div>
+<header>
+    <img src="Pictures/KJ_Renovator_spelled_out_logo_white-04.png" alt="KJ Renovations" height="50px">
+    <!-- Replace 'KJ_Renovator_spelled_out_logo_white-04.png' with the path to your image -->
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact Us</a>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
-    <div class="container">
-         <h2>Gallery</h2>
-         <div class="controls">
-             <div class="before-after-container">
-                 <div class="column" id="beforeColumn">
-                     <h3>Before</h3>
-                     <img src="Pictures\B & F\B1.jpg" alt="Image 1">
-                     <img src="Pictures\B & F\B2.jpg" alt="Image 2">
-                     <!-- Add more "Before" images as needed -->
-                     <div class="arrow arrow-left" onclick="prevImage()">&#10094;</div>
-                     </div>
-                     <div class="column" id="afterColumn">
-                         <h3>After</h3>
-                     <img src="Pictures\B & F\A1.jpg" alt="Image 3">
-                     <img src="Pictures\B & F\A2.jpg" alt="Image 4">
-                     <!-- Add more "After" images as needed -->
-                     <div class="arrow arrow-right" onclick="nextImage()">&#10095;</div>
-                    </div>
-                </div>
+<div class="container">
+    <h2>Gallery</h2>
+    <div class="controls">
+        <div class="before-after-container">
+            <div class="column" id="beforeColumn">
+                <h3>Before</h3>
+                <img src="Pictures\B & F\B1.jpg" alt="Image 1">
+                <img src="Pictures\B & F\B2.jpg" alt="Image 2">
+                <!-- Add more "Before" images as needed -->
+                <div class="arrow arrow-left" onclick="prevImage()">&#10094;</div>
             </div>
-            <h3 style="text-align: center;">Gallery</h3>
-        <div class="gallery-row">
-            <img src="Pictures\B & F\B1.jpg" alt="Image 5" onclick="expandImage(this)">
-            <img src="Pictures\B & F\A2.jpg" alt="Image 6" onclick="expandImage(this)">
-            <img src="Pictures\B & F\A1.jpg" alt="Image 7" onclick="expandImage(this)">
+            <div class="column" id="afterColumn">
+                <h3>After</h3>
+                <img src="Pictures\B & F\A1.jpg" alt="Image 3">
+                <img src="Pictures\B & F\A2.jpg" alt="Image 4">
+                <!-- Add more "After" images as needed -->
+                <div class="arrow arrow-right" onclick="nextImage()">&#10095;</div>
+            </div>
         </div>
-        </div>
+    </div>
+    <h3>More of Our Work</h3>
+    <div class="gallery-row">
+        <img src="Pictures\B & F\B1.jpg" alt="Image 5" onclick="expandImage(this)">
+        <img src="Pictures\B & F\A2.jpg" alt="Image 6" onclick="expandImage(this)">
+        <img src="Pictures\B & F\A1.jpg" alt="Image 7" onclick="expandImage(this)">
+    </div>
+    <div class="expanded-image-container">
+        <!-- Container for expanded image -->
+    </div>
+</div>
 
+<script>
+    // JavaScript for image cycling
+    var currentIndex = 0;
+    var beforeImages = document.getElementById("beforeColumn").getElementsByTagName("img");
+    var afterImages = document.getElementById("afterColumn").getElementsByTagName("img");
 
-        <script>
-        // JavaScript for image cycling
-        var currentIndex = 0;
-        var beforeImages = document.getElementById("beforeColumn").getElementsByTagName("img");
-        var afterImages = document.getElementById("afterColumn").getElementsByTagName("img");
-
-        function showImage(index) {
-            if (index < 0) {
-                index = beforeImages.length - 1;
-            } else if (index >= beforeImages.length) {
-                index = 0;
-            }
-
-            for (var i = 0; i < beforeImages.length; i++) {
-                beforeImages[i].style.display = "none";
-                afterImages[i].style.display = "none";
-            }
-
-            beforeImages[index].style.display = "block";
-            afterImages[index].style.display = "block";
-            currentIndex = index;
+    function showImage(index) {
+        if (index < 0) {
+            index = beforeImages.length - 1;
+        } else if (index >= beforeImages.length) {
+            index = 0;
         }
 
-        function prevImage() {
-            showImage(currentIndex - 1);
+        for (var i = 0; i < beforeImages.length; i++) {
+            beforeImages[i].style.display = "none";
+            afterImages[i].style.display = "none";
         }
 
-        function nextImage() {
-            showImage(currentIndex + 1);
+        beforeImages[index].style.display = "block";
+        afterImages[index].style.display = "block";
+        currentIndex = index;
+    }
+
+    function prevImage() {
+        showImage(currentIndex - 1);
+    }
+
+    function nextImage() {
+        showImage(currentIndex + 1);
+    }
+
+    // Show the first image initially
+    showImage(currentIndex);
+
+    // Function to expand image
+    function expandImage(img) {
+        var images = document.querySelectorAll('.gallery-row img');
+        var clickedIndex = Array.prototype.indexOf.call(images, img);
+        var tempSrc = img.src;
+        var tempAlt = img.alt;
+
+        // Move clicked image to the center
+        img.src = beforeImages[0].src;
+        img.alt = beforeImages[0].alt;
+        beforeImages[0].src = tempSrc;
+        beforeImages[0].alt = tempAlt;
+
+        // Shift other images accordingly
+        for (var i = 1; i < beforeImages.length; i++) {
+            tempSrc = beforeImages[i].src;
+            tempAlt = beforeImages[i].alt;
+            beforeImages[i].src = afterImages[i - 1].src;
+            beforeImages[i].alt = afterImages[i - 1].alt;
+            afterImages[i - 1].src = tempSrc;
+            afterImages[i - 1].alt = tempAlt;
         }
 
-        // Show the first image initially
-        showImage(currentIndex);
+        // Create expanded image element
+        var expandedImage = document.createElement('img');
+        expandedImage.src = tempSrc;
+        expandedImage.alt = tempAlt;
 
-        // Function to expand image
-        function expandImage(img) {
-            var images = document.querySelectorAll('.gallery-row img');
-            var clickedIndex = Array.prototype.indexOf.call(images, img);
-            var tempSrc = img.src;
-            var tempAlt = img.alt;
+        // Append expanded image to the container
+        var expandedImageContainer = document.querySelector('.expanded-image-container');
+        expandedImageContainer.innerHTML = '';
+        expandedImageContainer.appendChild(expandedImage);
 
-            // Move clicked image to the center
-            img.src = beforeImages[0].src;
-            img.alt = beforeImages[0].alt;
-            beforeImages[0].src = tempSrc;
-            beforeImages[0].alt = tempAlt;
-
-            // Shift other images accordingly
-            for (var i = 1; i < beforeImages.length; i++) {
-                tempSrc = beforeImages[i].src;
-                tempAlt = beforeImages[i].alt;
-                beforeImages[i].src = afterImages[i - 1].src;
-                beforeImages[i].alt = afterImages[i - 1].alt;
-                afterImages[i - 1].src = tempSrc;
-                afterImages[i - 1].alt = tempAlt;
-            }
-
-            // Scroll to the expanded image
-            img.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    </script>
- </body>
- </html>
+        // Scroll to the expanded image
+        expandedImage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+</script>
+</body>
+</html>
