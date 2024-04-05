@@ -82,7 +82,6 @@
           text-align: center; /* Center the content horizontally */
           position: relative; /* Position arrows relative to the column */
           overflow: hidden; /* Hide overflowing arrows */
-          position: relative; /* Position arrows relative to the column */
       }
 
       .column img {
@@ -115,7 +114,8 @@
           font-size: 32px;
           cursor: pointer;
           position: absolute; /* Position arrows absolutely */
-          top: calc(50% - 16px); /* Align arrows vertically in the middle */
+          top: 50%; /* Align arrows vertically in the middle */
+          transform: translateY(-50%); /* Center arrows vertically */
           color: white; /* Set arrow color */
       }
 
@@ -129,16 +129,17 @@
 
       .before-text, .after-text {
           position: absolute;
-          top: 10px;
+          top: 5px; /* Adjust distance from the top of the images */
           font-size: 16px;
           font-weight: bold;
           color: white;
           left: 50%;
           transform: translateX(-50%);
+          z-index: 1; /* Ensure the text is above the images */
       }
 
       .before-text {
-          top: 10px;
+          top: 5px; /* Adjust distance from the top of the images */
       }
 
       .gallery-row {
@@ -214,10 +215,29 @@
                margin-top: 20px; /* Add margin space */
            }
            .spaced-word {
-               margin-left: 20px;
-           }
+    margin-left: 20px;
+}
        }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "KJRenovators",
+      "description": "KJRenovators offers professional home renovation services in Columbus, Ohio. Transform your home with our expert remodeling solutions.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Main St",
+        "addressLocality": "Columbus",
+        "addressRegion": "OH",
+        "postalCode": "43016",
+        "addressCountry": "US"
+      },
+      "telephone": "(614) 681-1610",
+      "url": "https://kjrenovators.com/",
+
+    }
+    </script>
 </head>
 <body>
   <header>
