@@ -20,14 +20,15 @@
       }
 
       header {
-          background-color: #333;
-          color: #fff;
-          padding: 10px 20px;
-          text-align: center;
-          display: flex;
-          justify-content: space-between;
-          align-items: center; /* Center vertically */
-      }
+    display: flex;
+    align-items: center;
+}
+
+.grey-band {
+    flex-grow: 1;
+    background-color: #ccc;
+    height: 50px; /* Adjust the height as needed */
+}
 
       nav {
           margin-top: 10px;
@@ -239,20 +240,23 @@
     </style>
 </head>
 <body>
-    <header style="height: 40px;">
-        <img src="Pictures/Logo.png" alt="KJ Renovations" style="height: 100%; width: auto;margin: 0;">
-        <nav>
-            <div class="dropdown">
-                <button class="dropbtn">Menu</button>
-                <div class="dropdown-content">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="contact.html">Contact Us</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <header>
+  <img src="Pictures/Logo.png" alt="KJ Renovations" style="height: 100%; width: auto; margin: 0;">
+  <!-- Replace 'Pictures/Logo.png' with the path to your image -->
+  <div class="grey-band"></div>
+  <nav>
+      <div class="dropdown">
+          <button class="dropbtn">Menu</button>
+          <div class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+  </nav>
+</header>
+
 
     <div class="container">
         <h2>About Us</h2>
