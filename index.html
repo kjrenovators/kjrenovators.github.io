@@ -235,18 +235,70 @@
     <p class="about-us-text" style="text-align: left;">Thanks for considering us for your next renovation adventure!<br>
     ~Aaron and Grant The KJRennovators Team</p>
 </div>
-div class="container">
-    <h2 class="about-us">About Us</h2>
-    <p class="about-us-text" style="text-indent: 20px; text-align: left;">Welcome to KJRennovators LLC, where we're all about turning your house into a home.<br>
-    We're Grant Jordan and Aaron Kleinman, the guys behind the scenes making the magic happen.</p>
+<div class="container">
+    <h2>Gallery</h2>
+    <div class="controls">
+        <div class="before-after-container">
+            <div class="column" id="beforeColumn">
+                <h3>Before</h3>
+                <img src="Pictures\B & F\B1.jpg" alt="Image 1">
+                <img src="Pictures\B & F\B2.jpg" alt="Image 2">
+                <!-- Add more "Before" images as needed -->
+                <div class="arrow arrow-left" onclick="prevImage()">&#10094;</div>
+            </div>
+            <div class="column" id="afterColumn">
+                <h3>After</h3>
+                <img src="Pictures\B & F\A1.jpg" alt="Image 3">
+                <img src="Pictures\B & F\A2.jpg" alt="Image 4">
+                <!-- Add more "After" images as needed -->
+                <div class="arrow arrow-right" onclick="nextImage()">&#10095;</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript for image cycling
+        var currentIndex = 0;
+        var beforeImages = document.getElementById("beforeColumn").getElementsByTagName("img");
+        var afterImages = document.getElementById("afterColumn").getElementsByTagName("img");
 
-    <p class="about-us-text" style="text-indent: 20px; text-align: left;">We started KJRennovators because we're passionate about making homes better, one nail at a time. Whether it's a small upgrade or a full-blown makeover, we're all in. Here at KJRennovators, we're not your average contractors. We're more like your partners in crime when it comes to home improvement. We listen to your ideas, geek out over design details, and make sure every corner of your home reflects your style and personality.</p>
+        function showImage(index) {
+            if (index < 0) {
+                index = beforeImages.length - 1;
+            } else if (index >= beforeImages.length) {
+                index = 0;
+            }
 
-    <p class="about-us-text" style="text-indent: 20px; text-align: left;">So, whether you want to jazz up your kitchen, spruce up your bathroom, or overhaul your entire house, KJRennovators has got your back. Let's turn your house into the cozy, stylish retreat you've always dreamed of.</p>
+            for (var i = 0; i < beforeImages.length; i++) {
+                beforeImages[i].style.display = "none";
+                afterImages[i].style.display = "none";
+            }
 
-    <p class="about-us-text" style="text-align: left;">Thanks for considering us for your next renovation adventure!<br>
-    ~Aaron and Grant The KJRennovators Team</p>
-</div>
+            beforeImages[index].style.display = "block";
+            afterImages[index].style.display = "block";
+            currentIndex = index;
+        }
+
+        function prevImage() {
+            showImage(currentIndex - 1);
+        }
+
+        function nextImage() {
+            showImage(currentIndex + 1);
+        }
+
+        // Show the first image initially
+        showImage(currentIndex); </script>
+
+
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p class="contact-us-text"> Please fill out the form below to get in touch with us.</p>
+            <!-- Wrap Google Form inside a div and center it -->
+            <div class="contact-us-container">
+                <iframe class="contact-us-form" src="https://docs.google.com/forms/d/e/1FAIpQLScnn44mW_MlNSMtUn5Uzh1TEWLFNZWLSNtAa-CQoGhCBEXsyg/viewform?embedded=true" width="640" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </div>
+
 <div class="container">
     <h2>Contact Us</h2>
     <p class="contact-us-text"> Please fill out the form below to get in touch with us.</p>
