@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KJ Renovations - Gallery</title>
     <style>
       /* Your CSS styles here */
@@ -130,6 +128,20 @@
           right: 0; /* Position arrow to the right edge of the column */
       }
 
+      .arrow-left:before,
+      .arrow-right:before {
+          content: 'Before';
+          position: absolute;
+          bottom: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          color: white;
+      }
+
+      .arrow-right:before {
+          content: 'After';
+      }
+
       .gallery-row {
           clear: both; /* Clear floating images */
           margin-top: 20px; /* Add margin between rows */
@@ -233,14 +245,12 @@
     <div class="controls">
         <div class="before-after-container">
             <div class="column" id="beforeColumn">
-                <h3>Before</h3>
                 <img src="Pictures\B & F\B1.jpg" alt="Image 1">
                 <img src="Pictures\B & F\B2.jpg" alt="Image 2">
                 <!-- Add more "Before" images as needed -->
                 <div class="arrow arrow-left" onclick="prevImage()">&#10094;</div>
             </div>
             <div class="column" id="afterColumn">
-                <h3>After</h3>
                 <img src="Pictures\B & F\A1.jpg" alt="Image 3">
                 <img src="Pictures\B & F\A2.jpg" alt="Image 4">
                 <!-- Add more "After" images as needed -->
