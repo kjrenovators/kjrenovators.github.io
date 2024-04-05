@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Renovation Services in Columbus, Ohio | YourCompany Name</title>
+        <meta name="description" content="YourCompany offers professional home renovation services in Columbus, Ohio. Transform your home with our expert remodeling solutions. Contact us for a free consultation!">
+        <meta name="keywords" content="home renovation, remodeling, Columbus Ohio, contractors, kitchen renovation, bathroom renovation">
     <title>KJ Renovations - Gallery</title>
     <style>
       /* Your CSS styles here */
@@ -59,7 +64,6 @@
 
       .contact-us-form {
           margin-top: 10px; /* Add some space above the form */
-          width: 100%; /* Make the form width 100% */
       }
 
       .contact-us-text {
@@ -81,7 +85,6 @@
           padding: 10px;
           text-align: center; /* Center the content horizontally */
           position: relative; /* Position arrows relative to the column */
-          overflow: hidden; /* Hide overflowing arrows */
       }
 
       .column img {
@@ -116,30 +119,14 @@
           position: absolute; /* Position arrows absolutely */
           top: 50%; /* Align arrows vertically in the middle */
           transform: translateY(-50%); /* Center arrows vertically */
-          color: white; /* Set arrow color */
       }
 
       .arrow-left {
-          left: -40px; /* Position arrow to the left edge of the column */
+          left: -30px; /* Position arrow to the left of the column */
       }
 
       .arrow-right {
-          right: -40px; /* Position arrow to the right edge of the column */
-      }
-
-      .before-text, .after-text {
-          position: absolute;
-          top: 5px; /* Adjust distance from the top of the images */
-          font-size: 16px;
-          font-weight: bold;
-          color: white;
-          left: 50%;
-          transform: translateX(-50%);
-          z-index: 1; /* Ensure the text is above the images */
-      }
-
-      .before-text {
-          top: 5px; /* Adjust distance from the top of the images */
+          right: -30px; /* Position arrow to the right of the column */
       }
 
       .gallery-row {
@@ -264,14 +251,14 @@
     <div class="controls">
         <div class="before-after-container">
             <div class="column" id="beforeColumn">
-                <h3 class="before-text">Before</h3>
+                <h3>Before</h3>
                 <img src="Pictures\B & F\B1.jpg" alt="Image 1">
                 <img src="Pictures\B & F\B2.jpg" alt="Image 2">
                 <!-- Add more "Before" images as needed -->
                 <div class="arrow arrow-left" onclick="prevImage()">&#10094;</div>
             </div>
             <div class="column" id="afterColumn">
-                <h3 class="after-text">After</h3>
+                <h3>After</h3>
                 <img src="Pictures\B & F\A1.jpg" alt="Image 3">
                 <img src="Pictures\B & F\A2.jpg" alt="Image 4">
                 <!-- Add more "After" images as needed -->
@@ -311,8 +298,7 @@
         }
 
         // Show the first image initially
-        showImage(currentIndex);
-    </script>
+        showImage(currentIndex); </script>
 </div>
 
 <div class="container">
@@ -320,7 +306,7 @@
     <p class="contact-us-text">Please fill out the form below to get in touch with us.</p>
     <!-- Wrap Google Form inside a div and center it -->
     <div class="contact-us-container">
-        <iframe class="contact-us-form" src="https://docs.google.com/forms/d/e/1FAIpQLScnn44mW_MlNSMtUn5Uzh1TEWLFNZWLSNtAa-CQoGhCBEXsyg/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe class="contact-us-form" src="https://docs.google.com/forms/d/e/1FAIpQLScnn44mW_MlNSMtUn5Uzh1TEWLFNZWLSNtAa-CQoGhCBEXsyg/viewform?embedded=true" width="640" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 </div>
 </body>
