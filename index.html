@@ -25,30 +25,42 @@
           align-items: center;
           background-color: #555; /* Darker grey for the header */
           padding: 10px; /* Add padding to the header */
-  }
+      }
 
-  .grey-band {
-      flex-grow: 1;
-      background-color: #555;
-      height: 50px; /* Adjust the height to match the photo */
-  }
+      .grey-band {
+          flex-grow: 1;
+          background-color: #555;
+          height: 50px; /* Adjust the height to match the photo */
+      }
 
-  .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-      background-color: #ccc; /* Background color same as the grey band */
-  }
+      .container {
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 0 20px;
+          background-color: #ccc; /* Background color same as the grey band */
+      }
 
-  /* Center the "About Us" header */
-  h2.about-us {
-      text-align: center;
-      font-size: 24px; /* Increase the font size */
-  }
+      /* Center the "About Us" header */
+      h2.about-us {
+          text-align: center;
+          font-size: 24px; /* Increase the font size */
+      }
 
-  .about-us-text {
-      font-size: 20px; /* Increase the text size */
-  }
+      .about-us-text {
+          font-size: 20px; /* Increase the text size */
+      }
+
+      .contact-us-container {
+          text-align: right;
+      }
+
+      .contact-us-form {
+          margin-right: 10px; /* Move the form to the right by 10 pixels */
+      }
+
+      .contact-us-text {
+          text-align: center; /* Center the text */
+      }
 
 
       .container {
@@ -277,10 +289,10 @@
 
         <div class="container">
             <h2>Contact Us</h2>
-            <p> Please fill out the form below to get in touch with us.</p>
+            <p class="contact-us-text"> Please fill out the form below to get in touch with us.</p>
             <!-- Wrap Google Form inside a div and center it -->
-            <div class="center">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScnn44mW_MlNSMtUn5Uzh1TEWLFNZWLSNtAa-CQoGhCBEXsyg/viewform?embedded=true" width="640" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <div class="contact-us-container">
+                <iframe class="contact-us-form" src="https://docs.google.com/forms/d/e/1FAIpQLScnn44mW_MlNSMtUn5Uzh1TEWLFNZWLSNtAa-CQoGhCBEXsyg/viewform?embedded=true" width="640" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
         </div>
 
